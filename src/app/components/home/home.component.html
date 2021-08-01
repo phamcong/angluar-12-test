@@ -1,0 +1,14 @@
+<!-- <mat-paginator [length]="200"
+               [pageSize]="25"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               (page)="pageEvent = $event">
+</mat-paginator> -->
+<section class="example-section"
+         [formGroup]="ageRangeSelection">
+  <h4>Select age ranges:</h4>
+  <p *ngFor="let ageRange of ageRangeSltItems">
+    <mat-checkbox [formControlName]="ageRange.label">
+      {{ ageRange.label }}
+    </mat-checkbox>
+  </p>
+</section>

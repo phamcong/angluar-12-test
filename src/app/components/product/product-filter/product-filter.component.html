@@ -1,0 +1,9 @@
+<section class="example-section"
+         [formGroup]="ageRangeSelection">
+  <h4>Select age ranges:</h4>
+  <p *ngFor="let ageRange of ageRangeSltItems">
+    <mat-checkbox [formControlName]="ageRange.label">
+      {{ ageRange.label }}
+    </mat-checkbox>
+  </p>
+</section>

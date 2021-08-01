@@ -1,0 +1,8 @@
+<div *ngIf="(productListItems$ | async) as products">
+  {{ products.length }} <br />
+  <div class="row">
+    <div class="col col-md-4 my-2" *ngFor="let product of products">
+      <app-product-list-item [product]="product"></app-product-list-item>
+    </div>
+  </div>
+</div>
